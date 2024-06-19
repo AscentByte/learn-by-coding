@@ -40,6 +40,8 @@ alloc_heap_space:
 	mov rsi, msg_failed_len
 	mov rdi, msg_failed
 	call _myPrint	
+	ret
+
 	.aloc:
 		mov r8, rdi ; 先将申请堆的大小进行保存
 		mov rax, 12; 12 是sys_brk的系统调用号
